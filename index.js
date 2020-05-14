@@ -27,13 +27,14 @@ const octokit = new github.GitHub(githubToken);
 
 async function run() {
   await nowDeploy();
-  if (context.issue.number) {
-    core.info('this is related issue or pull_request ');
-    await createCommentOnPullRequest();
-  } else if (context.eventName === 'push') {
-    core.info('this is push event');
-    await createCommentOnCommit();
-  }
+  // Disable commenting functionality for now. This have to work on push with pull_requests
+  // if (context.issue.number) {
+  //   core.info('this is related issue or pull_request ');
+  //   await createCommentOnPullRequest();
+  // } else if (context.eventName === 'push') {
+  //   core.info('this is push event');
+  //   await createCommentOnCommit();
+  // }
 }
 
 async function nowDeploy() {
