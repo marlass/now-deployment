@@ -59,7 +59,7 @@ async function nowDeploy() {
       [
         'now@19',
         ...nowArgs.split(/ +/),
-        '-t',
+        '--token',
         zeitToken,
         '-m',
         `githubCommitSha=${context.sha}`,
