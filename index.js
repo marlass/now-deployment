@@ -100,7 +100,7 @@ async function createCommentOnCommit() {
   });
 
   const zeitPreviewURLComment = comments.find((comment) =>
-    comment.body.startsWith('Deploy preview for _website_ ready!')
+    comment.body.startsWith('Deploy preview for website ready!')
   );
 
   let deploymentUrl;
@@ -152,7 +152,7 @@ async function createCommentOnCommit() {
   }
 
   const commentBody = stripIndents`
-    Deploy preview for _website_ ready!
+    Deploy preview for website ready!
 
     Built with commit ${deploymentCommit}
 
@@ -184,7 +184,7 @@ async function createCommentOnPullRequest() {
   console.log(comments);
 
   const zeitPreviewURLComment = comments.find((comment) =>
-    comment.body.startsWith('Deploy preview for _website_ ready!')
+    comment.body.startsWith('Deploy preview for website ready!')
   );
 
   let deploymentUrl;
@@ -236,7 +236,7 @@ async function createCommentOnPullRequest() {
   }
 
   const commentBody = stripIndents`
-    Deploy preview for _website_ ready!
+    Deploy preview for website ready!
 
     Built with commit ${deploymentCommit}
 
